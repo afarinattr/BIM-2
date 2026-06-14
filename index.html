@@ -11,7 +11,7 @@
     html, body {
       margin: 0;
       height: 100%;
-      background: #ffffff;
+      background: white !important;
     }
 
     body {
@@ -24,7 +24,9 @@
       width: 90vw;
       height: 90vh;
 
-      background-color: #ffffff;
+      /* 🔥 FORZAR FONDO REAL DEL CANVAS */
+      --poster-color: white;
+      background-color: white !important;
     }
   </style>
 </head>
@@ -35,9 +37,11 @@
   src="./D355-T02-1-Vista3D-Orto3D1.glb"
   camera-controls
   auto-rotate
-  shadow-intensity="0.8"
-  environment-image="neutral"
-  tone-mapping="neutral">
+  shadow-intensity="0"
+  environment-image=""
+  tone-mapping="neutral"
+  style="background-color: white !important;"
+>
 </model-viewer>
 
 </body>
