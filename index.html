@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
 
+  <title>Visualizador 3D</title>
+
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
   <style>
     body {
       margin: 0;
-      background: #111;
+      background: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -18,6 +20,7 @@
     model-viewer {
       width: 90vw;
       height: 90vh;
+      background-color: #ffffff;
     }
   </style>
 </head>
@@ -28,9 +31,10 @@
   src="./D355-T02-1-Vista3D-Orto3D1.glb"
   camera-controls
   auto-rotate
-  shadow-intensity="1"
-  tone-mapping="neutral"
-></model-viewer>
+  shadow-intensity="0.8"
+  environment-image="neutral"
+  tone-mapping="neutral">
+</model-viewer>
 
 </body>
 </html>
