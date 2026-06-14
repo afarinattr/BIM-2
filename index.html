@@ -5,13 +5,14 @@
 
   <title>Visualizador 3D</title>
 
+  <!-- model-viewer -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
   <style>
     html, body {
       margin: 0;
       height: 100%;
-      background: white !important;
+      background: #ffffff;
     }
 
     body {
@@ -23,10 +24,16 @@
     model-viewer {
       width: 90vw;
       height: 90vh;
+      background: #ffffff;
+    }
 
-      /* 🔥 FORZAR FONDO REAL DEL CANVAS */
-      --poster-color: white;
-      background-color: white !important;
+    /* Hotspot básico (si luego los usas) */
+    .Hotspot {
+      background: red;
+      border: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
     }
   </style>
 </head>
@@ -37,10 +44,11 @@
   src="./D355-T02-1-Vista3D-Orto3D1.glb"
   camera-controls
   auto-rotate
-  shadow-intensity="0"
-  environment-image=""
+  shadow-intensity="0.8"
+  exposure="1"
   tone-mapping="neutral"
-  style="background-color: white !important;"
+  ar
+  ar-modes="webxr scene-viewer quick-look"
 >
 </model-viewer>
 
